@@ -17,6 +17,27 @@ module.exports = class TarefaDAO{
 
 
     }
+    
+    novaTarefa(tarefa){
+        return new Promise((resolve, reject)=>{
+            this.bd.all('INSERT INTO TAREFAS (TITULO, DESCRICAO, STATUS, DATACRIACAO, ID_USUARIO) VALUES (?,?,?,?,?)', tarefa, (error, rows)=>{
+
+                if(error){
+                    reject(`[ERRO] Erro ao inserir tarefa. ${error}`)
+                }else{
+                    resolve(rows)
+                }
+            })
+        })
+    }
+
+    mudaTarefa(oarametro){
+        return new Promise((resolve, reject)=>{
+            
+        })
+    }
+
+
 
 
 
