@@ -1,9 +1,9 @@
 const usuarioModels = require("../models/usuarioModels");
-const usuarioDAO = require("../DAO/usuario_DAO");
+const UsuarioDAO = require("../DAO/usuario_DAO");
 
 module.exports = (app, bd)=> {
 
-    const daoUsuarios = new usuarioDAO(bd)
+    const daoUsuarios = new UsuarioDAO(bd)
     
     app.get("/usuario", async (req, res)=>{
         
@@ -43,7 +43,8 @@ module.exports = (app, bd)=> {
         try{
             const apagaUsuario = await daoUsuarios.deletaUsuario(parametroDel);
             res.send(apagaUsuario)
-        }catch(error){
+        }
+        catch(error){
             res.send(error);
         }
 
