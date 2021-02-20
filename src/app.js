@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const porta = 3000;
+const porta = process.env.PORT;
 
 const usuarioController = require("../src/controllers/usuarioController");
 const tarefaController = require("../src/controllers/tarefaController");
