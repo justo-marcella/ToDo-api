@@ -21,7 +21,7 @@ Caso você queira rodar essa api em sua máquina basta seguir essas instruções
 
 * Instale Node.js em seu computador.
 * Baixe os arquivos deste repositório ou faça um clone utilizando o comando git clone https://github.com/justo-marcella/repTeste.git terminal.
-* Navegue para a pasta do repositório do projeto e instale as dependências que serão necessárias para sua utilização. Para isso basta utilizar o comando "npm install" npm terminal.
+* Navegue para a pasta do repositório do projeto e instale as dependências que serão necessárias para sua utilização. Para isso basta utilizar o comando "npm install" no terminal.
 * Ainda no seu terminal utilize o seguinte comando “npm start” para inicializar a aplicação.
 
 
@@ -68,4 +68,4 @@ http://localhost:3000/tarefa/id
 
 ## Deploy
 
-Para hospedar gratuitamente a aplicação, foi utilizado o Heroku. A API pode ser acessada através do link: ______ + rota desejada.
+...Loading
