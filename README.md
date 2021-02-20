@@ -20,7 +20,7 @@ O Github foi utilizado para controle de versionamento.
 Caso você queira rodar essa api em sua máquina basta seguir essas instruções:
 
 * Instale Node.js em seu computador.
-* Baixe os arquivos deste repositório ou faça um clone utilizando o comando git clone https://github.com/justo-marcella/repTeste terminal.
+* Baixe os arquivos deste repositório ou faça um clone utilizando o comando git clone https://github.com/justo-marcella/repTeste.git terminal.
 * Navegue para a pasta do repositório do projeto e instale as dependências que serão necessárias para sua utilização. Para isso basta utilizar o comando "npm install" npm terminal.
 * Ainda no seu terminal utilize o seguinte comando “npm start” para inicializar a aplicação.
 
