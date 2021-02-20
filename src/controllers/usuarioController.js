@@ -1,4 +1,4 @@
-const usuarioModels = require("../models/usuarioModels");
+// const usuarioModels = require("../models/usuarioModels");
 const UsuarioDAO = require("../DAO/usuario_DAO");
 
 module.exports = (app, bd)=> {
@@ -14,7 +14,19 @@ module.exports = (app, bd)=> {
         catch(error){
             res.send(error);
         }
-        })
+    })
+
+    app.get("/usuario/:ID", async (req, res)=>{
+        try{
+            const retornoUsr = await daoUsuarios.listaUmUsr();
+            res.send(retornoUsr);
+        }
+        catch(error){
+            res.send(error);
+        }
+    })
+
+    
 
     app.post("/usuario", async  (req, res)=>{
             

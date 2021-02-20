@@ -15,6 +15,21 @@ module.exports = class UsuarioDAO{
             })
         })
     }
+
+    
+    listaUmUsr(parametroUsr){
+
+        return new Promise((resolve, reject)=>{
+            let selectUsr = "SELECT * FROM USUARIOS WHERE EMAIL=?"
+            this.bd.all(selectUsr, parametroUsr, (error, rows)=>{
+                if(error){
+                    reject(`[ERRO] Erro na consulta.  ${error}`)
+                }else{
+                    resolve(rows)
+                }
+            })
+        })
+    }
         
     insereUsuario(usuario){
         return new Promise ((resolve, reject)=>{
@@ -55,5 +70,6 @@ module.exports = class UsuarioDAO{
             })
         })
     }
+
 
 }

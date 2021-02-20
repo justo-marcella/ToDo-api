@@ -14,21 +14,31 @@ module.exports = (app, bd)=>{
         }
     })
 
-    app.post("/tarefa", async (req, res)=:{
-        
+    app.get("/tarefa/:ID", async (req, res)=>{
         try{
-            const insereTarefa = await daoTarefas.novaTarefa([req.body.titulo, req.body.descricao, req.body.status, req.body.datacriacao, req.body.ID_usuario]);
-            res.send(`Tarefa inserida com sucesso. ${insereTarefa}`)
+            const retornoTrf = await daoTarefas.listaUmaTrf(req.params.ID);
+            res.send(retornoTrf);
         }
         catch(error){
             res.send(error);
         }
     })
 
-    app.put("/tarefa/:titulo", async (req, res)=>{
-        let parametro = [req.body.titulo, req.body.descricao, req.body.status, req.body.datacriacao, req.body.ID_usuario];
+    app.post("/tarefa", async (req, res)=>{
+        
         try{
-            const alteraTarefa = await daoTarefas.mudaTarefa(parametro);
+            const insereTarefa = await daoTarefas.novaTarefa([req.body.TITULO, req.body.DESCRICAO, req.body.STATUS, req.body.DATACRIACAO, req.body.ID_USUARIO])
+            res.send(insereTarefa);
+        }
+        catch(error){
+            res.send(error);
+        }
+    })
+
+    app.put("/tarefa/:ID", async (req, res)=>{
+        let parametroPut = [req.params.id, req.body.id, req.body.titulo, req.body.descricao, req.body.status, req.body.datacriacao, req.body.id_usuario];
+        try{
+            const alteraTarefa = await daoTarefas.mudaTarefa(parametroPut);
             res.send(alteraTarefa)
         }
         catch(error){
@@ -36,8 +46,8 @@ module.exports = (app, bd)=>{
         }
     })
 
-    app.delete("/tarefa/:titulo", async (req, res)=>{
-        let parametroDel = [req.params.TITULO];
+    app.delete("/tarefa/:ID", async (req, res)=>{
+        let parametroDel = [req.params.ID];
         try{
             const apagaTarefa = await daoTarefas.deletaTarefa(parametroDel);
             res.send(apagaTarefa)
