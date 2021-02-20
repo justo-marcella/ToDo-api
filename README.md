@@ -3,15 +3,14 @@
 
 A TODO-APP-API é uma api desenvolvida no módulo 3 do Bootcamp de Desenvolvimento Web FullStack da Resilia. A proposta foi para criar uma API de gestão de tarefas baseada em kanban.
 
-Nesse projeto foi utilizado:
-* JavaScript
+Ferramentas utilizadas:
+
 * NodeJS
 * Express
 * Sqlite 3
 * CORS
-* Body-Parser
-* Nodemon
-* Insominia
+* body-parser
+* Insomnia
 
 
 O Github foi utilizado para controle de versionamento.
@@ -67,3 +66,6 @@ Para adicionar uma tarefa ao banco, digite no corpo da requisição as informaç
 * **DELETE** – Para apagar um registro na tabela de “tarefas” no banco de dados: 
 http://localhost:3000/tarefa/id
 
+## Deploy
+
+Para hospedar gratuitamente a aplicação, foi utilizado o Heroku. A API pode ser acessada através do link: ______ + rota desejada.
