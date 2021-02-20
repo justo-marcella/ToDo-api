@@ -36,7 +36,7 @@ module.exports = (app, bd)=>{
     })
 
     app.put("/tarefa/:ID", async (req, res)=>{
-        let parametroPut = [req.params.id, req.body.id, req.body.titulo, req.body.descricao, req.body.status, req.body.datacriacao, req.body.id_usuario];
+        let parametroPut = [req.body.TITULO, req.body.DESCRICAO, req.body.STATUS, req.body.DATACRIACAO, req.body.ID_USUARIO, req.params.ID];
         try{
             const alteraTarefa = await daoTarefas.mudaTarefa(parametroPut);
             res.send(alteraTarefa)

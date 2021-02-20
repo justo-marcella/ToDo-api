@@ -41,10 +41,10 @@ module.exports = class TarefaDAO{
         })
     }
 
-    mudaTarefa(parametroPut){
+    mudaTarefa(parametro){
         return new Promise((resolve, reject)=>{
             let query = "UPDATE TAREFAS SET TITULO = ?, DESCRICAO = ?, STATUS = ?, ID_USUARIO = ? WHERE ID=?" 
-                this.bd.run(query, parametroPut, (error)=>{
+                this.bd.run(query, parametro, (error)=>{
                     if(error){
                         reject(`[ERRO]Erro na atualização da tarefa ${error}`)
                     }else{
